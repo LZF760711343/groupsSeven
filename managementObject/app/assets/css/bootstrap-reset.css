@@ -1,0 +1,61 @@
+/*重写b3的panel的头部*/
+.panel-heading {
+    border-color: #eff2f7;
+    font-size: 16px;
+    font-weight: 300;
+    border-top: 2px solid #454b61;
+}
+
+/*重写b3的panel*/
+.panel{
+    margin-bottom: 60px;
+
+}
+
+
+/*重写b3的label-primary*/
+.label-primary {
+    background-color: #59ace2;
+}
+/*重写b3的label*/
+.label {
+    padding: 0.5em 0.8em;
+}
+/*重写b3的modal-header*/
+.modal-header {
+    background: #54b6d1;
+    color: #fff;
+    border-radius: 5px 5px 0 0;
+    -webkit-border-radius: 5px 5px 0 0;
+    border-bottom: none;
+}
+
+/*重写分页组件的高度*/
+.pagination > li > a{
+
+    height: 40px;
+    line-height: 200%;
+
+}
+
+
+/*统计单独样式*/
+#count{
+
+    border: 0px;
+}
+/*跳转单独样式*/
+#goto{
+    line-height: 1.42857143;
+    border: 0px;
+}
+
+#count:hover,#goto:hover,#count:focus,#goto:focus{
+    z-index: 2;
+    color: #337ab7;
+    background-color: #ffffff;
+    cursor:default;
+}
+
+
+

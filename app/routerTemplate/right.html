@@ -1,0 +1,36 @@
+<script src="js/three.js"></script>
+
+<span  ng-click="yuantu()" class="button_item button_item_1">原题</span> <span ng-click="dang()" class="button_item button_item_2">答案</span>
+
+<div ng-if="bian" class="item_question">
+    {{changeName}}
+    <div ng-repeat="item in items">{{item.itemname}}
+        <p>{{item.stert}}</p>
+        <p>{{item.stert1}}</p>
+        <p>{{item.stert2}}</p>
+        <p>{{item.stert3}}</p>
+    </div>
+    <div class="q-b-r-bottom pagination-top">
+        <nav>
+            <ul class="pagination pagination-lg">
+                <li class="disabled"><a href="#">上一题</a></li>
+                <li class="active"><a href="#">1<span class="sr-only">(current)</span></a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">...</a></li>
+                <li><a href="#">21</a></li>
+                <li><a href="#">下一题</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<div ng-if="!bian" class="item_question">
+    {{changesName}}
+    <div ng-repeat="item in items">
+
+        {{item.anwer}}
+    </div>
+</div>
+

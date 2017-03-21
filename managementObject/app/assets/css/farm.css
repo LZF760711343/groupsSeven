@@ -1,0 +1,104 @@
+@charset "UTF-8";
+/*导航栏的总体高度设置*/
+body{
+    min-width: 600px;/*最小的宽度，之后不改变*/
+    padding-top: 59px;/*让出顶部导航的位置*/
+    background-color: #ececec;
+}
+.my-nav{
+    height: 59px;
+    line-height: 52px;
+    background-color: #2f3649;
+    border: 0;
+    border-radius: 0;
+}
+/*侧边栏平滑伸缩的按钮，在导航位置*/
+.my-nav i{
+    padding: 4px 6px;
+    background-color: #ffffff;
+    border-radius: 6px;
+    font-weight: bold;
+}
+/*标题，在导航位置*/
+.my-nav-font{
+    color: #ffffff;
+    font-family: "Microsoft YaHei";
+    font-size: 18px;
+}
+/*导航栏右边位置的系统时间*/
+.showDate{
+    color: #ffffff;
+    font-weight: bold;
+}
+/*侧边栏*/
+.sidebar{
+    width: 210px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    background-color: #454b61;
+    color: #ffffff;
+    top: 59px;
+    overflow-x: hidden;/*侧边栏的水平方向滚动条隐藏*/
+    overflow-y: auto;/*侧边栏的垂直方向滚动条自动*/
+}
+.my-sidebar-ul{
+    margin-top: 12px;
+}
+.my-sidebar-ul>li>a{
+    width: 210px;
+    height: 50px;
+    margin-left: -20px;
+    color: #ffffff;
+    line-height: 35px;
+}
+/*鼠标移上去与鼠标点击后发生变化*/
+.my-sidebar-ul>li>a:hover,.my-sidebar-ul>li>a:focus{
+    background-color: slategray;
+    opacity: 0.6;
+    width: 210px;
+    height: 50px;
+}
+/*侧边栏的小图标*/
+.my-sidebar-ul>li>a img{
+    float: left;
+    margin-top: 10px;
+    margin-left: 8px;
+}
+/*侧边栏的文字信息*/
+.my-sidebar-ul>li>a span{
+    float: left;
+    margin-left: 6px;
+}
+/*侧边栏小方块*/
+.my-sidebar-ul>li>a>.label{
+    display: block;
+    width: 60px;
+    height: 30px;
+    line-height: 20px;
+}
+/*脚注*/
+.managementFooter{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    background-color: #2f3649;
+    padding: 10px 0;
+    color: #ffffff;
+}
+/*返回顶部样式设置*/
+/*.managementFooter>div>a{*/
+/*margin-right: 0;*/
+/*background-color: #ffffff;*/
+/*border-radius: 50%;*/
+/*!*padding-right: 0;*!*/
+/*}*/
+/*.managementFooter>div>a>i{*/
+/*width: 14px;*/
+/*height:12px;*/
+/*font-weight: bold;*/
+/*}*/
+/*返回顶部样式设置结束*/

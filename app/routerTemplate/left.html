@@ -1,0 +1,10 @@
+
+<div>
+    <span class="change_topic">选择题型</span>
+    <div ng-repeat="item in topictypes">
+
+        <div class="topic_css">
+            <a href="{{'#/subject/'+typeId+'/details/'+item.id}}" class="topic_css_a">{{item.name}}</a>
+        </div>
+    </div>
+</div>

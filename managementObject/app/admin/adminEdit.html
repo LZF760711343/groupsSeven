@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>神猫题库后台管理V1.0-管理员密码修改</title>
+    <!--样式加载-->
+    <!--B3样式框架-->
+    <link href=" ../lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <!--font-awesome字体图标-->
+    <link href=" ../lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!--&lt;!&ndash;后台全局样式&ndash;&gt;-->
+    <link href="../assets/css/fream.css" rel="stylesheet">
+
+    <!--&lt;!&ndash;后台B3样式修改&ndash;&gt;-->
+    <link href="../assets/css/bootstrap-reset.css" rel="stylesheet">
+
+    <!--&lt;!&ndash;后台导航样式&ndash;&gt;-->
+    <!--<link href="../assets/css/admin-navbar.css" rel="stylesheet">-->
+    <!--&lt;!&ndash;后台边栏样式&ndash;&gt;-->
+    <!--<link href="../assets/css/admin-sidebar.css" rel="stylesheet">-->
+    <!--&lt;!&ndash;后台面板样式&ndash;&gt;-->
+    <!--<link href="../assets/css/admin-panel.css" rel="stylesheet">-->
+
+    <!--&lt;!&ndash;后台表格样式&ndash;&gt;-->
+    <link href="../assets/css/admin-table.css" rel="stylesheet">
+    <!--&lt;!&ndash;后台右边内容样式&ndash;&gt;-->
+    <link href="../assets/css/admin-my-main.css" rel="stylesheet">
+    <!--&lt;!&ndash;后台脚注样式&ndash;&gt;-->
+    <!--<link href="../assets/css/admin-my-footer.css" rel="stylesheet">-->
+
+    <!--后台外框架样式-->
+    <link href="../assets/css/farm.css" rel="stylesheet">
+</head>
+<body id="managementForm">
+<!--头部导航栏-->
+<!--navbar-fixed-top使导航条固定在顶板-->
+<nav class="navbar navbar-default my-nav navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <!--边栏显示、隐藏按钮-->
+            <a class="navbar-brand" href="#" onclick="sidebarClick()"><i class="fa fa-bars"></i></a>
+            <span class="my-nav-font">神猫题库-后台管理V1.0</span>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <i class="fa fa-clock-o"></i>
+                <li><a><span class="showDate" id="showDate"></span></a></li><!--显示时间设置-->
+            </ul>
+        </div>
+    </div>
+</nav>
+<!--导航结束-->
+<!--侧边栏-->
+<aside class="sidebar" id="sidebar">
+    <ul class="nav my-sidebar-ul">
+        <li>
+            <a href="topicTypeInfo.html" class="active">
+                <img src="../assets/img/topicType.png">
+                <span>题型信息显示</span>
+                <span class="label label-warning">5</span>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav my-sidebar-ul">
+        <li>
+            <a href="subjectInfo.html" class="active">
+                <img src="../assets/img/subjectInfo.png">
+                <span>学科信息显示</span>
+                <span class="label label-success">1</span>
+            </a>
+        </li>
+        <li>
+            <a href="subjectAdd.html" class="active">
+                <img src="../assets/img/addSubject.png">
+                <span>学科信息添加</span>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav my-sidebar-ul">
+        <li>
+            <a href="topicInfo.html" class="active">
+                <img src="../assets/img/topicInfo.png">
+                <span>题目信息显示</span>
+                <span class="label label-info">60000</span>
+            </a>
+        </li>
+        <!--题目添加-->
+        <!--选择题添加-->
+        <li>
+            <a href="choice.html" class="active">
+                <img src="../assets/img/addTopic.png">
+                <span>单选题题目信息添加</span>
+            </a>
+        </li>
+        <li>
+            <a href="choice.html" class="active">
+                <img src="../assets/img/addTopic.png">
+                <span>多选题题目信息添加</span>
+            </a>
+        </li>
+        <!--问答题-->
+        <li>
+            <a href="interlocution.html" class="active">
+                <img src="../assets/img/addTopic.png">
+                <span>问答题题目信息添加</span>
+            </a>
+        </li>
+        <!--判断题-->
+        <li>
+            <a href="judge.html" class="active">
+                <img src="../assets/img/addTopic.png">
+                <span>判断题题目信息添加</span>
+            </a>
+        </li>
+        <!--填空题-->
+        <li>
+            <a href="pack.html" class="active">
+                <img src="../assets/img/addTopic.png">
+                <span>填空题题目信息添加</span>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav my-sidebar-ul">
+        <li>
+            <a href="adminEdit.html" class="active">
+                <img src="../assets/img/revise-1.png">
+                <span>管理员密码修改</span>
+            </a>
+        </li>
+        <li>
+            <a data-toggle="modal" data-target="#myClose" class="active">
+                <img src="../assets/img/close-1.png">
+                <span>管理员退出</span>
+            </a>
+        </li>
+    </ul>
+</aside>
+<!--侧边栏结束-->
+<!--右边内容-->
+<!--右边内容栏-->
+<div class="my-main" id="content">
+    <!--内容-->
+    <div class="container-fluid ">
+        <section class="panel">
+            <header class="panel-heading">
+                <span class="label label-primary">管理员密码修改</span>
+            </header>
+            <div class="panel-body">
+                <form class="form-horizontal">
+                   <div class="form-group">
+                       <label class="col-sm-2 control-label">管理员账号：</label>
+                       <div class="col-sm-4">
+                           <input type="text" class="form-control" readonly><!--readonly 属性规定输入字段为只读-->
+                       </div>
+                   </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">管理员原始密码：</label>
+                        <div class="col-sm-4">
+                            <input type="password" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">管理员新密码：</label>
+                        <div class="col-sm-4">
+                            <input type="password" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">管理员密码确认：</label>
+                        <div class="col-sm-4">
+                            <input type="password" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-sm-2 text-right">
+                        <button type="button" class="btn btn-sm btn-primary">
+                            保存<i class="fa fa-check"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+</div>
+<!--脚注-->
+<footer class="managementFooter">
+    <div class="container-fluid">
+        <div class="row">
+            2016 © Olive Admin by Olive Enterprise.
+            <!--返回顶部-->
+            <!--<a onclick="goTop()" class="col-lg-offset-10">-->
+            <!--<i class="fa fa-angle-up"></i>-->
+            <!--</a>-->
+        </div>
+    </div>
+
+</footer>
+<!--模态框2-->
+<div class="modal fade" id="myClose">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title">退出后台确认</h4>
+            </div>
+            <div class="modal-body">
+                <p>你确定退出后台管理吗？</p>
+            </div>
+            <div class="modal-footer">
+                <a href="../../../app/index.html"><button type="button" class="btn btn-success">确定</button></a>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">取消</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+</body>
+</html>
+<!--jQuery类库加载-->
+<script src="../lib/jquery/dist/jquery.min.js"></script>
+<!--bootstrap类库加载-->
+<script src="../lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<!--angular类库加载-->
+<script src="../lib/angular/angular.min.js"></script>
+<!--jquery.scrollTo类库加载-->
+<script src="../lib/jquery.scrollTo/jquery.scrollTo.min.js"></script>
+<!--jquery.lazyload类库加载-->
+<script src="../lib/jquery_lazyload-master/jquery.lazyload.js"></script>
+<!--自定义js-->
+<!--关于导航右边位置的系统时间-->
+<script src="../assets/js/date.js"></script>
+
+<script>
+
+    // 平滑滚动，使用的插件是jquery.scrollTo,返回顶部
+    //    function goTop() {
+    //
+    //        $.scrollTo('#managementForm', 500);
+    //    }
+
+
+    //    隐藏和实现边栏
+    function sidebarClick() {
+
+        if ($('#sidebar').is(':visible')) {
+            sidebarHidden();
+        }
+        else {
+            $('#sidebar').show();
+            sidebarShow();
+        }
+    }
+
+
+    function sidebarShow() {
+        $('#sidebar').animate({left: '0'}, 200, function () {
+            $('#content').css('margin-left', '210px');
+
+        });
+
+    }
+    function sidebarHidden() {
+        $('#sidebar').animate({left: '-210'}, 200, function () {
+            $('#content').css('margin-left', '0px');
+
+            $('#sidebar').hide();
+        });
+    }
+
+
+    $(function () {
+
+        imgLayz();
+
+        window.setInterval(function () {
+            var date = new Date();
+            $('#showDate').text(showDate(date));
+        }, 1000);
+
+
+    });
+
+
+    // 图片懒加载设置
+    function imgLayz() {
+        $("img.lazy").lazyload(
+                {
+                    //container: $('.product-list'),   // 对指定标签对象内的图片实现效果，表示在此标签中滚动时，触发加载（注意：如果容器未设置height和overfload:auto，那么会默认加载所有图片）
+                    threshold: 100,                    //当图片顶部距离显示区域还有100像素时，就开始加载
+                    placeholder: "../assets/img/grey.gif",      // 图片未加载时，占位
+                    effect: "slideDown",               // 图片出现的效果，值有show(直接显示),fadeIn(淡入),slideDown(下拉)
+                    effect_speed: 500,                // 效果出现的时间
+                    event: 'scroll',                   // 滚动滚轮时触发，可以是：click、mouseover等
+                    data_attribute: 'original',        // img标签中保存url的自定义属性，默认：data-original
+                    skip_invisible: true,              // 是否跳过已经隐藏的图片（display:none）
+                    failure_limit: 2,                  // 由于延迟加载是根据Dom从上到下执行
+                                                       // 如果遇到Dom位置在上，但是图片定位在下导致看不到，那么会以为之后的图片不在应用延迟加载
+                                                       // 此处的failure_limit用于限制如果出现N个【Dom位置在上，但是图片定位在下】才终止
+                    appear: function () {
+
+                    },
+                    load: function (e) {
+//                        图片加载完毕的回调
+//                        e参数为当前加载的图片下标【从最后一个开始加载，0为最后一个】
+
+                    }
+
+                }
+        );
+    }
+
+
+</script>

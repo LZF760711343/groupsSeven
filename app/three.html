@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myapp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--CSS-->
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/three.css">
+    <!--jquery-->
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <!--B3-->
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!--angular-->
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <!--angular路由-->
+    <script src="../bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <!--模块顺序【1】-->
+    <script src="app.js"></script>
+    <!--路由表-->
+    <script src="router/uiRouter.js"></script>
+    <script src="run/run.js"></script>
+    <script src="server/basePath.js"></script>
+    <script src="server/itemService.js"></script>
+    <script src="routerController/topicTypcCtrl.js"></script>
+
+    <!--其他控制器-->
+    <script src="controller/threeCtrl.js"></script>
+    <script src="routerController/topicTypcCtrl.js"></script>
+    <script src="routerController/topicTypcinfoCtrl.js"></script>
+</head>
+
+<body>
+<div ng-controller="threeCtrl">
+    <!--导航栏-->
+    <nav class="nav_all">
+        <section class="container">
+            <section class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                <a  href="index.html#page1"><img src="assets/img/logo.png" class="img-margin"></a>
+            </section>
+            <section class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+                <ul class="col-xs-10 col-sm-10 col-md-10 col-lg-10 nav_middle">
+                    <li class="col-xs-2 col-sm-2 col-md-2 col-lg-2"><a href="index.html">首页</a></li>
+                    <li class="col-xs-2 col-sm-2 col-md-2 col-lg-2"><a href="more.html">题库</a></li>
+                    <li class="col-xs-8 col-sm-8 col-md-8 col-lg-8"><a href="index.html#page5" >团队介绍</a></li>
+                </ul>
+                <ul class="navbar-right col-xs-2 col-sm-2 col-md-2 col-lg-2 nav_foot">
+                    <li><a href="login.html">登录</a></li>
+                </ul>
+            </section>
+        </section>
+    </nav>
+<!--题库内容区-->
+    <div class="container big_Div">
+        <div class="row">
+            <div class="col-md-2 col-xs-2 col-sm-2 col-lg-2 margin-left-0">
+                <span class="item_bold">题库</span>
+            </div>
+            <div class="col-md-10 col-xs-10 col-sm-10 col-lg-10">
+                <span ng-repeat="item in subjects" class="subject"><a href="{{item.url}}" class="subject_a">{{item.name}}</a></span>
+            </div>
+            <div ui-view></div>
+        </div>
+    </div>
+<!--题库内容区结束-->
+</div>
+<!--脚注-->
+<section class="footer">
+    <!--第一层-->
+    <section class="ft_first container">
+        <section class="row">
+            <section class="ft_first_left col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 col-lg-4 col-md-4 col-sm-4 col-xs-4 ft_float">
+                <section class="row">
+                    <section class="ft_first_left_j1 col-lg-4 col-md-4 col-sm-4 col-xs-4 ft_float">
+                        <img id="chang1" src="assets/img/QQ.png">
+                        <p>关于我们</p>
+                    </section>
+                    <section class="ft_first_left_j2 col-lg-4 col-md-4 col-sm-4 col-xs-4 ft_float">
+                        <img id="chang2" src="assets/img/weibo.png">
+                        <p>联系我们</p>
+                    </section>
+                    <section class="ft_first_left_j3 col-lg-4 col-md-4 col-sm-4 col-xs-4 ft_float">
+                        <img id="chang3" src="assets/img/weixin.png">
+                        <p>加入我们</p>
+                    </section>
+                </section>
+            </section>
+            <section class="ft_first_right col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 col-lg-6 col-md-6 col-sm-6 col-xs-6 ft_float">
+
+                <section><span>友情链接</span></section>
+                <section class="row">
+                    <section class="ft_ul col-lg-3 col-md-3 col-sm-3 col-xs-3 ft_float">
+                        <p>HTML5</p>
+                        <p>安卓的开发</p>
+                        <p>云计算</p>
+                    </section>
+                    <section class="ft_ul col-lg-3 col-md-3 col-sm-3 col-xs-3 ft_float">
+                        <p>Go社区</p>
+                        <p>Android</p>
+                        <p>全栈工程师</p>
+                    </section>
+                    <section class="ft_ul col-lg-3 col-md-3 col-sm-3 col-xs-3 ft_float">
+                        <p>WEB开发</p>
+                        <p>UI设计</p>
+                        <p>code4app</p>
+                    </section>
+                    <section class="ft_ul col-lg-3 col-md-3 col-sm-3 col-xs-3 ft_float">
+                        <p>&nbsp;</p>
+                        <p>php开发</p>
+                        <p>编程语言</p>
+                    </section>
+                </section>
+            </section>
+        </section>
+    </section>
+
+    <!--第二层-->
+    <section class="ft_second">
+        <section class="container">
+            <section class="ft_second_footnote">
+                <span>c2016 Item Pool-中国IT职业教育O2O创新品牌 京ICP备13004859号</span>
+            </section>
+            <!--<改动结束>-->
+        </section>
+    </section>
+</section>
+<!--脚注结束-->
+</div>
+</body>
+</html>

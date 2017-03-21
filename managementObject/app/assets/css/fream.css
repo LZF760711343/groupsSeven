@@ -1,0 +1,79 @@
+
+/*日期字体颜色样式*/
+#nowDate {
+    color: #0f0f0f;
+}
+
+/*body顶部50，让出顶部导航的位置 */
+body {
+    padding-top: 59px;
+    min-width: 600px;
+    background: #e5e6e6;
+}
+
+
+
+/*go to top*/
+.my-go-top {
+    cursor: pointer;
+    margin-right: 1%;
+    float: right;
+    background: rgba(127, 221, 248, .5);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+}
+
+
+
+/*按钮图标*/
+button>i,a>i{
+    margin-left: 5px;
+}
+
+
+/*form表单按钮最小尺寸*/
+form button{
+  min-width: 100px;
+}
+/*a连接按钮最小尺寸*/
+.a-btn{
+    min-width: 100px;
+}
+
+/*form表单中lable提示信息*/
+.from-lable{
+    color: #2e6da4;
+    font-weight: normal;
+}
+
+
+/*图片外框*/
+.my-thumbnail{
+    padding: 5px;
+    border: 1px solid #c0c0c0;
+    background-color: #ffffff;
+}
+
+
+
+
+/*缩略图尺寸*/
+.img-t-96x96{
+    height: 96px;
+    width: 96px;
+}
+.img-t-150x175{
+    height: 150px;
+    width: 175px;
+}
+.img-t-128x128{
+    height: 128px;
+    width: 128px;
+}
+.img-t-300x350{
+    height: 300px;
+    width: 350px;
+}
+

@@ -1,0 +1,229 @@
+﻿@charset "UTF-8";
+/*设置在最小什么宽度不会变化*/
+body {
+    min-width: 768px;
+    font-family: "Microsoft YaHei ";
+    overflow-x: hidden;
+}
+/*导航栏*/
+/*导航栏外围nav,去除其中的定位属性navbar-fixed-top*/
+.nav_all {
+    height: 80px;
+    opacity: 0.8;
+    background-color: #cccccc;
+}
+/*导航栏a标签的样式设计*/
+.nav_all .container section:nth-child(2){
+    height: 80px;
+    line-height: 80px;
+}
+.img-margin{
+    margin-top:8px;
+}
+nav section section ul{
+    list-style: none;
+}
+nav>section>section>ul>li>a{
+    color: #0a0a0a;
+}
+.nav_middle li a {
+    font-size: 20px;
+    text-decoration: none;
+}
+ .nav_foot li a {
+     font-size: 20px;
+     text-decoration: none;
+}
+/*内容区域*/
+/*外层的DIV*/
+.more_content {
+    width: 100%;
+    height: 775px;
+    background-size: 100% 100%;
+    background-image: url("../img/two.png");
+    background-repeat: no-repeat;
+    margin: 0;
+}
+/*内容区域轮播图上的图片*/
+/*.more_container{*/
+    /*padding-top: 45px;*/
+/*}*/
+/*内容区域轮播图上的缩略图样式设置*/
+.more_content_thumbnail>a+a{
+    padding: 0;
+}
+.more_content_thumbnail>a+a>img{
+    width: 100%;
+    height: 100%;
+}
+/*鼠标放上缩略图中出现的链接样式*/
+.maskLayer {
+    display: none;
+    text-align: center;
+    font-size: 18px;
+    position: absolute;
+    background-color: #000000;
+    color: #fff;
+    opacity: 0.8;
+    z-index: 100;
+}
+/*鼠标放上缩略图中出现的链接响应式变化，媒体查询*/
+@media (max-width: 767px) {
+    .maskLayer{
+        width: 210px;
+        height: 60px;
+        line-height: 60px;
+        top: 130px;
+    }
+    .thumbnail{
+        margin: 40px auto 0;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .maskLayer{
+        width: 210px;
+        height: 60px;
+        line-height: 60px;
+        top: 130px;
+    }
+    .thumbnail{
+        margin: 40px auto 0;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .maskLayer{
+        width: 283px;
+        height: 70px;
+        line-height: 70px;
+        top: 135px;
+    }
+    .thumbnail{
+        margin: 40px auto 0;
+    }
+}
+@media (min-width: 1200px)and (max-width: 1700px){
+
+
+    .more_content{
+        height: 560px;
+    }
+    .thumbnail{
+       margin: 20px auto 0;
+       width:300px;
+       height: 230px;
+
+   }
+    .maskLayer{
+        margin-left: 25px;
+        width: 300px;
+        height: 80px;
+        line-height: 80px;
+        top: 120px;
+    }
+}
+@media (min-width: 1701px){
+
+    .maskLayer{
+        width: 350px;
+        height: 80px;
+        line-height: 80px;
+        top: 210px;
+    }
+    .thumbnail{
+        margin: 40px auto 0;
+    }
+}
+    /*媒体查询结束*/
+/*内容区域结束*/
+/*脚注*/
+.footer{
+    width: 100%;
+    height: 200px;
+    background: #ffffff;
+    color:#666;
+}
+/*浮动设置*/
+.ft_float{
+    float: left;
+}
+.ft_first{
+    height: 116px;
+    margin: 19px auto 0 auto;
+    padding: 0px;
+}
+.ft_first_left{
+    height: 90px;
+    margin-top: 30px;
+}
+.ft_first_left p{
+    font-size:14px;
+    margin-top: 28px;
+}
+.ft_first_left_j1 img{
+    margin-left: 10.5px;
+}
+.ft_first_left_j2 img{
+    margin-left: 9.5px;
+}
+.ft_first_left_j3 img{
+    margin-left: 11px;
+}
+.ft_first_left img{
+    width: 39px;
+    height: 40px;
+}
+.ft_first_right{
+    margin-top: 30px;
+    padding: 0;
+    height: 116px;
+}
+.ft_first_right  span{
+    font-size: 16px;
+}
+.ft_ul{
+    width: 110px;
+}
+.ft_ul p{
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+.ft_second{
+    width: 560px;
+    height: 12px;
+    clear:left;
+    margin: 0 auto;
+}
+.ft_second_footnote{
+    width: 540px;
+    height: 12px;
+    text-align: center;
+}
+.ft_second_footnote span{
+    font-size:12px;
+}
+/*脚注旋转图片*/
+#chang1, #chang2, #chang3 {
+    -webkit-background-size: 220px 220px;
+    -moz-background-size: 220px 220px;
+    background-size: 220px 220px;
+    -webkit-border-radius: 110px;
+    border-radius: 110px;
+    -webkit-transition: -webkit-transform 2s ease-out;
+    -moz-transition: -moz-transform 2s ease-out;
+    -o-transition: -o-transform 2s ease-out;
+    -ms-transition: -ms-transform 2s ease-out;
+}
+#chang1:hover,#chang2:hover,#chang3:hover {
+    -webkit-transform: rotateY(720deg);
+    -moz-transform: rotateY(720deg);
+    -o-transform: rotateY(720deg);
+    -ms-transform: rotateY(720deg);
+    transform: rotateY(720deg);
+    cursor: pointer;
+}
+/*脚注旋转图片*/
+
+
+

@@ -1,0 +1,239 @@
+﻿@charset "UTF-8";
+body{
+    min-width:768px;
+}
+/*设置在最小什么宽度不会变化*/
+body {
+    min-width: 750px;
+    font-family: "Microsoft YaHei ";
+}
+/*导航栏*/
+/*导航栏外围nav,去除其中的定位属性navbar-fixed-top*/
+.nav_all {
+    height: 80px;
+    opacity: 0.8;
+    background-color: #cccccc;
+}
+/*导航栏a标签的样式设计*/
+.nav_all .container section:nth-child(2){
+    height: 80px;
+    line-height: 80px;
+}
+.img-margin{
+    margin-top:8px;
+}
+nav section section ul{
+    list-style: none;
+}
+nav>section>section>ul>li>a{
+    color: #0a0a0a;
+}
+.nav_middle li a {
+    font-size: 20px;
+    text-decoration: none;
+}
+.nav_foot li a {
+    font-size: 20px;
+    text-decoration: none;
+}
+/*内容区样式设置*/
+.big_Div{
+    padding-top: 77px;
+    height: 714px;
+    border-left: 5px solid #F7F7F7;
+}
+.item_bold{
+    font-weight: bold;
+    display: inline-block;
+    width:100px;
+    height: 32px;
+    font-size: 20px;
+    line-height: 45px;
+    color: #1887e3;
+    padding-left: 18px;
+    border-left: 3px solid #1887e3;
+}
+.subject{
+    margin-left: 55px;
+}
+.subject_a{
+    color: #b2b2b2;
+}
+.subject_a:link{
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+}
+.subject_a:hover{
+    color: #1887e3;
+}
+.left_topics{
+    margin-top: 100px;
+}
+.change_topic{
+    color: #1887e3;
+    font-weight: bold;
+}
+.topic_css{
+    position: relative;
+    left: -15px;
+    width: 90px;
+    height: 35px;
+    line-height: 35px;
+    background-color:#E5E5E5 ;
+    margin-top: 35px;
+    padding-left: -20px;
+    text-align: center;
+    border-radius:0 20px 20px 0 ;
+}
+.topic_css_a{
+    font-weight: bold;
+    color: #666666;
+}
+.topic_css_a:link{
+    text-decoration: none;
+}
+.topic_css_a:hover{
+    color: #1887E3;
+}
+.button_item{
+    display: inline-block;
+    width: 80px;
+    height:25px;
+    line-height: 25px;
+    text-align: center;
+    background-color: #666666;
+    color: #ffffff;
+    border-radius: 18px 18px 0 0;
+    font-size: 12px;
+}
+.button_item_1{
+
+    margin-left: 80px;
+}
+.button_item:hover{
+    cursor: pointer;
+}
+
+.button_item_2{
+    margin-left: 10px;
+}
+.item_question{
+    padding-top: 60px;
+    padding-left: 60px;
+    width: 800px;
+    height: 400px;
+    background-color: #e5e5e5;
+}
+.margin-left{
+   margin-left: 225px;
+}
+/*修改三级页面部分*/
+.margin-left-0{
+   padding-left: 0;
+}
+.pagination-top{
+    position: absolute;
+    left: 250px;
+    top: 340px;
+}
+.background-color1{
+    background-color:#00b3ee;
+}
+.background-color2{
+    background-color:#666666;
+}
+body{
+    overflow-x: hidden;
+    min-width: 650px;
+}
+/*修改三级页面部分*/
+    /*-------------*/
+/*脚注*/
+.footer{
+    width: 100%;
+    height: 200px;
+    background: #cccccc;
+    color:#666;
+}
+/*浮动设置*/
+.ft_float{
+    float: left;
+}
+.ft_first{
+    height: 116px;
+    margin: 19px auto 0 auto;
+    padding: 0px;
+}
+.ft_first_left{
+    height: 90px;
+    margin-top: 30px;
+}
+.ft_first_left p{
+    font-size:14px;
+    margin-top: 28px;
+}
+.ft_first_left_j1 img{
+    margin-left: 10.5px;
+}
+.ft_first_left_j2 img{
+    margin-left: 9.5px;
+}
+.ft_first_left_j3 img{
+    margin-left: 11px;
+}
+.ft_first_left img{
+    width: 39px;
+    height: 40px;
+}
+.ft_first_right{
+    margin-top: 30px;
+    padding: 0;
+    height: 116px;
+}
+.ft_first_right  span{
+    font-size: 16px;
+}
+.ft_ul{
+    width: 110px;
+}
+.ft_ul p{
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+.ft_second{
+    width: 560px;
+    height: 12px;
+    clear:left;
+    margin: 0 auto;
+}
+.ft_second_footnote{
+    width: 540px;
+    height: 12px;
+    text-align: center;
+}
+.ft_second_footnote span{
+    font-size:12px;
+}
+/*脚注旋转图片*/
+#chang1, #chang2, #chang3 {
+    -webkit-background-size: 220px 220px;
+    -moz-background-size: 220px 220px;
+    background-size: 220px 220px;
+    -webkit-border-radius: 110px;
+    border-radius: 110px;
+    -webkit-transition: -webkit-transform 2s ease-out;
+    -moz-transition: -moz-transform 2s ease-out;
+    -o-transition: -o-transform 2s ease-out;
+    -ms-transition: -ms-transform 2s ease-out;
+}
+#chang1:hover,#chang2:hover,#chang3:hover {
+    -webkit-transform: rotateY(720deg);
+    -moz-transform: rotateY(720deg);
+    -o-transform: rotateY(720deg);
+    -ms-transform: rotateY(720deg);
+    transform: rotateY(720deg);
+    cursor: pointer;
+}
+/*脚注旋转图片*/

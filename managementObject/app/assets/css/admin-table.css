@@ -1,0 +1,17 @@
+/*表格样式*/
+table.table {
+    clear: both;
+    margin-bottom: 6px!important;
+    max-width: none!important;
+}
+table.display {
+    margin: 0 auto;
+    clear: both;
+    width: 100%;
+}
+
+.adv-table table.display thead th {
+    border-bottom: 1px solid #DDDDDD;
+    padding: 10px;
+}
+

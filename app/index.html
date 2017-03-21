@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myapp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Title</title>
+    <!--CSS-->
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/mystyle.css">
+    <link rel="stylesheet" href="../bower_components/fullpage.js/dist/jquery.fullpage.css"/>
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <!--jquery-->
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/jquery-ui/jquery-ui.min.js"></script>
+    <script src="../bower_components/fullpage.js/dist/jquery.fullpage.extensions.min.js"></script>
+    <!--B3-->
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!--angular-->
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <!--angular路由-->
+    <script src="../bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <!--模块顺序【1】-->
+    <script src="app.js"></script>
+    <!--路由表-->
+    <script src="router/uiRouter.js"></script>
+    <script src="run/run.js"></script>
+    <script src="server/basePath.js"></script>
+    <!--其他控制器-->
+    <script src="controller/indexCtrl.js"></script>
+
+</head>
+<body>
+    <section ng-controller="indexCtrl">
+        <!--导航栏-->
+        <nav class="navbar-fixed-top nav_all">
+            <section class="container">
+                <section class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                    <a id="page1"><img src="assets/img/logo.png"></a>
+                </section>
+                <section class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+                    <ul class="col-xs-10 col-sm-10 col-md-10 col-lg-10 nav_middle">
+                        <li class="col-xs-2 col-sm-2 col-md-2 col-lg-2"><a href="index.html">首页</a></li>
+                        <li class="col-xs-2 col-sm-2 col-md-2 col-lg-2"><a href="more.html">题库</a></li>
+                        <li class="col-xs-8 col-sm-8 col-md-8 col-lg-8"><a id="page5">团队介绍</a></li>
+                    </ul>
+                    <ul class="navbar-right col-xs-2 col-sm-2 col-md-2 col-lg-2 nav_foot">
+                        <li><a href="login.html">登录</a></li>
+                    </ul>
+                </section>
+            </section>
+        </nav>
+            <!--内容-->
+            <section id="fullpage" class="section section--code">
+                <!--第一屏-->
+                <div class="section first">
+                    <div class="firstContent animated">
+                        <div class="firstImg">
+                            <img src="assets/img/html5.png">
+                            <img src="assets/img/java.png">
+                            <img src="assets/img/angluar_03.png">
+                        </div>
+                            <div class="firstOne">World advanced software education</div>
+                            <div class="firstTwo">Professionnal knowledge ask</div>
+                            <div class="firstThree allA"><a href="more.html">MORE</a></div>
+                            <div class="firstFour moveSectionDown"><img src="assets/img/button.png"></div>
+                    </div>
+                </div>
+                <!--第二屏-->
+                <div class="section second">
+                    <div class="secondContent">
+                        <div class="secondImg animated"><img src="assets/img/html5.png"></div>
+                        <div class="second-animated animated">
+                            <div class="secondOne">The world's popular programming technology</div>
+                            <div class="secondOne">Answer quesrtions do</div>
+                            <div class="secondTwo">在线模拟考试</div>
+                            <div class="secondTwo">不同类型题目</div>
+                            <div class="secondThree allA"><a href="three.html#/subject/1/details/1">立即了解</a></div>
+                            <div class="secondFour moveSectionDown"><img src="assets/img/button.png"></div>
+                        </div>
+
+                    </div>
+                </div>
+                <!--第三屏-->
+                <div class="section third">
+                    <div class="thirdContent animated">
+                            <div class="thirdImg"><img src="assets/img/java.png"></div>
+                            <div class="thirdOne">Most of the examination questions</div>
+                            <div class="thirdOne">Millions of people's choice</div>
+                            <div class="thirdTwo">随时随地题目练习</div>
+                            <div class="thirdTwo">无时无刻在线考试</div>
+                            <div class="thirdThree allA"><a href="three.html#/subject/5/details/21">点击查看</a></div>
+                            <div class="thirdFour moveSectionDown"><img src="assets/img/button.png"></div>
+                    </div>
+                </div>
+                <!--第四屏-->
+                <div class="section fourth">
+                    <div class="fourthContent animated">
+                        <div class="fourthImg"><img src="assets/img/angluar_03.png"></div>
+                        <div class="fourthOne">Millions of people online examination</div>
+                        <div class="fourthOne">The elite of the online answer</div>
+                        <div class="fourthTwo">人性化设计</div>
+                        <div class="fourthTwo">专业性网站</div>
+                        <div class="fourthThree allA"><a href="three.html#/subject/3/details/11">了解更多</a></div>
+                        <div class="fourthFour moveSectionDown"><img src="assets/img/button.png"></div>
+                    </div>
+                </div>
+                <!--第五屏-->
+                <div class="section fifth">
+                    <div class="container fifthContent animated">
+                        <div class="fifthTitle animated fifth-odd"><h1>Our Team</h1></div>
+                        <div class="row">
+                            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 fifthImg animated fifth-odd">
+                                <img src="assets/img/people1.png">
+                                <div>
+                                    <span>Jort</span><br/>
+                                    <span>世界顶级工程师，神猫题库创始人</span>
+                                </div>
+                            </div>
+                            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 fifthImg animated fifth-even">
+                                <img src="assets/img/people2.png">
+                                <div>
+                                    <span>Gnsg</span><br/>
+                                    <span>世界级讲师，高级工程师,程序员</span>
+                                </div>
+                            </div>
+                            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 fifthImg animated fifth-odd">
+                                <img src="assets/img/people3.png">
+                                <div>
+                                    <span>Amkj</span><br/>
+                                    <span>世界高级设计师，全球百科出题人</span>
+                                </div>
+                            </div>
+                            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 fifthImg animated fifth-even">
+                                <img src="assets/img/people4.png">
+                                <div>
+                                    <span>Rsvf</span><br/>
+                                    <span>世界级授课大师，教授</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--页脚-->
+                <section class="footer">
+                    <!--第一层-->
+                    <section class="ft_first container ">
+                        <section class="row">
+                            <section class="ft_first_left col-lg-4 col-md-4 col-sm-4 col-xs-4 float-left">
+                                <section class="row">
+                                    <section class="ft_first_left_j1 col-lg-4 col-md-4 col-sm-4 col-xs-4 float-left">
+                                        <img id="chang1" src="assets/img/QQ.png">
+                                        <p>关于我们</p>
+                                    </section>
+                                    <section class="ft_first_left_j2 col-lg-4 col-md-4 col-sm-4 col-xs-4 float-left">
+                                        <img id="chang2" src="assets/img/weibo.png">
+                                        <p>联系我们</p>
+                                    </section>
+                                    <section class="ft_first_left_j3 col-lg-4 col-md-4 col-sm-4 col-xs-4 float-left">
+                                        <img id="chang3" src="assets/img/weixin.png">
+                                        <p>加入我们</p>
+                                    </section>
+                                </section>
+                            </section>
+                            <section class="ft_first_right col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                <section><span>友情链接</span></section>
+                                <section class="row">
+                                    <section class="ft_ul col-lg-2 col-md-1 col-sm-2 col-xs-2">
+                                        <p>HTML5</p>
+                                        <p>安卓的开发</p>
+                                        <p>云计算</p>
+                                    </section>
+                                    <section class="ft_ul col-lg-2 col-md-1 col-sm-2 col-xs-2">
+                                        <p>Go社区</p>
+                                        <p>Android</p>
+                                        <p>全栈工程师</p>
+                                    </section>
+                                    <section class="ft_ul col-lg-2 col-md-1 col-sm-2 col-xs-2">
+                                        <p>WEB开发</p>
+                                        <p>UI设计</p>
+                                        <p>code4app</p>
+                                    </section>
+                                    <section class="ft_ul col-lg-2 col-md-1 col-sm-2 col-xs-2">
+                                        <p>&nbsp;</p>
+                                        <p>php开发</p>
+                                        <p>编程语言</p>
+                                    </section>
+                                </section>
+                            </section>
+                            <section class="goToTop col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                <a href="#page1">
+                                    <img src="assets/img/goToTop.png"/>
+                                </a>
+                            </section>
+                        </section>
+                    </section>
+                    <!--第二层-->
+                    <section class="ft_second">
+                        <section class="container">
+                            <section class="ft_second_footnote">
+                                <span>c2016 Item Pool-中国IT职业教育O2O创新品牌 京ICP备13004859号</span>
+                            </section>
+                        </section>
+                    </section>
+                </section>
+            </section>
+        </section>
+    </section>
+    <script>
+        AOS.init({
+            easing: 'ease-out-back',
+            duration: 1000
+        });
+    </script>
+    <script src="js/index.js"></script>
+</body>
+</html>

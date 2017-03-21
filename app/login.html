@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myapp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--CSS-->
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="stylesheet" href="assets/css/jquery.idcode.css"/>
+    <!--jquery-->
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <!--B3-->
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!--angular-->
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <!--angular路由-->
+    <script src="../bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <!--模块顺序【1】-->
+    <script src="app.js"></script>
+    <!--路由表-->
+    <script src="router/uiRouter.js"></script>
+    <script src="run/run.js"></script>
+    <script src="server/basePath.js"></script>
+    <!--其他控制器-->
+    <script src="controller/indexCtrl.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/jquery.idcode.js"></script>
+
+</head>
+<body onkeydown="keyLogin();">
+    <div  class="background-image" >
+        <div class="homepage">
+            <img src="assets/img/login_homepage.png">
+            <a href="index.html">返回首页</a>
+        </div>
+        <div class="login_box">
+            <div class="login_box_img">
+                <img src="assets/img/login_logo.png">
+            </div>
+            <div class="login_box_span">
+                <span>管理员后台登录系统</span>
+            </div>
+            <div class="login_box_content">
+                <form method="get">
+                    <div class="input-group login_box_input_width login_box_input_bottom">
+                        <span  class="input-group-addon login_box_content_png">
+                            <img src="assets/img/login_user.png"/>
+                        </span>
+                        <input id="admin" class="form-control login_box_content_png_input" name="user" type="text"  placeholder="请输入用户名" pattern="[A-Za-z0-9_\-\u4e00-\u9fa5]+"  maxlength="15" autocomplete="on" autofocus required oninvalid="setCustomValidity('请输入用户名')" oninput="setCustomValidity('')"/>
+                    </div>
+
+                    <div class="input-group login_box_input_width login_box_input_bottom">
+                        <span  class="input-group-addon login_box_content_png">
+                            <img src="assets/img/login_password.png">
+                        </span>
+                        <input id="password" class="form-control login_box_content_png_input" name="password" type="password"  placeholder="请输入密码" maxlength="12"  required oninvalid="setCustomValidity('请输入密码')"  oninput="setCustomValidity('')"/>
+                    </div>
+                    <div class="login_box_code login_box_input_bottom2 ">
+                        <div class="login_box_cd1"><input id ="Txtidcode" class="form-control login_box_input_width2 " name="code" type="text"  placeholder="请输入验证码" pattern="[0-9]{4}"  maxlength="4" required/></div>
+                        <div class="login_box_cd2"><span id="idcode"></span></div>
+                    </div>
+                    <div class="login_box_button">
+                        <a href="#" id="login_submit">
+                            <button id="butn" type="button" class="btn btn-primary login_box_input_width login_box_input_magrin">登录</button></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
